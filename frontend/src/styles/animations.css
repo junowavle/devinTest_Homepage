@@ -1,0 +1,72 @@
+/* Animation styles for the skills ticker */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  padding-right: 2rem;
+  will-change: transform;
+}
+
+.animate-marquee span {
+  display: inline-block;
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hero section text animation */
+.text-animation {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Smooth hover transition for navigation links */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #4ade80;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Button hover animation */
+.button-hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #4ade80;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+  background-color: #22c55e;
+}
+
+/* Korean text formatting */
+.kr-text {
+  word-break: keep-all;
+  line-height: 1.8;
+  letter-spacing: -0.025em;
+}

@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Hello message response type"""
+type Hello {
+  """Welcome message"""
+  message: String!
+}
+
+type Query {
+  """Returns a hello message"""
+  hello: Hello!
+}
